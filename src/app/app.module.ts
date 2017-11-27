@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {FingerprintAIO} from "@ionic-native/fingerprint-aio";
+import {LockService} from "../services/lock.service";
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    FingerprintAIO,
+    LockService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
